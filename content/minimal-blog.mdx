@@ -1,0 +1,26 @@
+---
+title: 'Minimal blog'
+publishedAt: '2024-06-15'
+---
+
+WIP 
+
+```jsx
+'use client'
+
+import { ThemeProvider } from 'next-themes'
+import type { ReactNode } from 'react'
+
+export default function Providers({ children }: { children: ReactNode }) {
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+    </ThemeProvider>
+  )
+}
+```

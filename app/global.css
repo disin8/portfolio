@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --font-fallback: -apple-system,"BlinkMacSystemFont","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif */
+
+@layer base {
+  :root {
+    --background: 60, 20%, 99%;
+    --foreground: 0 0% 4%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+
+    --radius: 0.5rem;
+
+    --color-gray-1000: 60 2% 50%;
+    --link-highlight: 0 0% 95%;
+
+    --toolbar-color: hsla(0, 0%, 99%, .5)
+  }
+
+  .dark {
+    --background: 0, 0%, 5%;
+    --foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+
+    --gray-color: 45, 5%, 69%;
+    --link-highlight: 60 2% 10%;
+
+    --toolbar-color: rgba(16, 16, 16, .5)
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+:root {
+  --sh-identifier: #404f63;
+  --sh-class: #306cbb;
+  --sh-sign: #8295a8;
+  --sh-entity: #e2861c;
+  --sh-keyword: #db2f23;
+  --sh-string: #0e8884;
+  --sh-jsxliterals: #5559c2;
+  --sh-property: #c11ce2;
+  --sh-comment: #9c9595;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sh-keyword: #fa645a;
+    --sh-class: #4f4cf8;
+    --sh-string: #0f6ca2;
+    --sh-identifier: white;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
+.toolbar {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .12), 0 0 0 1px hsla(0, 0%, 100%, 0.034);
+  backdrop-filter: blur(32px);
+}
+
+html {
+  min-width: 360px;
+}
+
+.prose .anchor {
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose a {
+  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: '#';
+}
+
+.prose *:hover>.anchor {
+  @apply visible;
+}
+
+.prose pre {
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg;
+}
+
+.prose pre code {
+  @apply p-0;
+  border: initial;
+}
+
+.prose pre {
+  line-height: 1
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+.prose h2,
+h3,
+h4 {
+  @apply font-medium tracking-tighter !important;
+}
+
+.prose strong {
+  @apply font-medium;
+}
+
+.prose> :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.prose .tweet a {
+  text-decoration: inherit;
+  font-weight: 500;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.prose .callout>p {
+  margin: 0 !important;
+}
+
+.title {
+  text-wrap: balance;
+}
