@@ -7,13 +7,13 @@ export const projectsList = [
   },
   {
     name: 'craft-ui',
-    description: 'Enhance your development workflow 10x',
+    description: 'UI components you can copy and paste into your apps',
     url: 'https://craft-ui.netlify.app/',
     release: 2024,
   },
   {
     name: 'devflow',
-    description: 'The best curated design resources for developers',
+    description: 'Enhance your development workflow 10x',
     url: 'https://devflow8.vercel.app/',
     release: 2024,
   },
