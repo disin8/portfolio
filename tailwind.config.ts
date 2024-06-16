@@ -13,6 +13,9 @@ const config = {
   ],
   prefix: '',
   theme: {
+    screens: {
+      xs: '510px',
+    },
     container: {
       center: true,
       padding: '2rem',

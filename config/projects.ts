@@ -6,6 +6,12 @@ export const projectsList = [
     release: 2024,
   },
   {
+    name: 'uiexp',
+    description: 'Experimental UI components built with framer-motion',
+    url: 'https://uiexp.vercel.app/',
+    release: 2024,
+  },
+  {
     name: 'craft-ui',
     description: 'UI components you can copy and paste into your apps',
     url: 'https://craft-ui.netlify.app/',
