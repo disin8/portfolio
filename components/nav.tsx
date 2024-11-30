@@ -1,7 +1,7 @@
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { ModeToggle } from './mode-toggle'
-import ScrollToTop from './scroll-to-top'
 import { NavLinks } from './nav-links'
+import ScrollToTop from './scroll-to-top'
 
 export function Navbar() {
   return (

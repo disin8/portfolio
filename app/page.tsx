@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import { ProjectLink } from '@/components/link'
 import { socialLinks } from '@/config/links'
 import { projectsList } from '@/config/projects'
+import Link from 'next/link'
 
 export default function Page() {
   const projects = projectsList.slice(0, 5)
@@ -22,15 +22,25 @@ export default function Page() {
       <div className="mt-12 mb-6 font-medium text-light-mode-primary dark:text-dark-mode-primary sm:mb-6 text-grayz">Experience</div>
       <div className="flex flex-col gap-y-3 mb-12">
         <div className="flex flex-row justify-between">
-          <p>
-            <span className="font-medium">NDA</span>
+          <p className="font-normal">
+            <Link className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground" href="https://www.belorusneft.by/">Belarusneft</Link>
             , Middle Front-end developer
+          </p>
+          <p className="opacity-50 text-sm font-light">august 2024 - now</p>
+        </div>
+        <hr />
+        <div className="flex flex-row justify-between">
+          <p className="font-normal">
+            <span className="font-medium">Military Academy of the Republic of Belarus</span>
+            <br />
+            Middle Front-end developer
+            <span className="ml-3 px-2 py-1 rounded-md bg-link-highlight font-light text-xs">Part time</span>
           </p>
           <p className="opacity-50 text-sm font-light">may 2023 - april 2024</p>
         </div>
         <hr />
         <div className="flex flex-row justify-between">
-          <p>
+          <p className="font-normal">
             <Link className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground" href="https://itechart.com">iTechArt</Link>
             , Front-end developer
           </p>
@@ -53,14 +63,14 @@ export default function Page() {
               </p>
             </ProjectLink>
           ))
-}
+        }
       </div>
 
       <hr />
 
       <div className="flex flex-row items-center gap-1 mt-12 pb-12">
         {socialLinks.map(link => (
-          <div className="flex items-center gap-1 group">
+          <div key={link.name} className="flex items-center gap-1 group">
             <Link
               key={link.name}
               className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground"

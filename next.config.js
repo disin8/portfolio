@@ -41,9 +41,6 @@ const securityHeaders = [
 ]
 
 const nextConfig = {
-  experimental: {
-    ppr: true,
-  },
   headers() {
     return [
       {

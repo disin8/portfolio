@@ -1,6 +1,6 @@
 import type { LinkProps } from 'next/link'
-import Link from 'next/link'
 import type { PropsWithChildren } from 'react'
+import Link from 'next/link'
 
 interface IProjectLink extends PropsWithChildren<LinkProps> {
   date: number

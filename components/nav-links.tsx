@@ -1,8 +1,8 @@
 'use client'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { navLinks } from '@/config/nav'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export function NavLinks() {
   const pathname = usePathname()

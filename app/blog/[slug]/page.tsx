@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Suspense, cache } from 'react'
-import { notFound } from 'next/navigation'
+import { increment } from '@/lib/actions'
+import { getBlogPosts } from '@/lib/blog'
+import { getViewsCount } from '@/lib/queries'
 import { CustomMDX } from 'components/mdx'
 import { unstable_noStore as noStore } from 'next/cache'
+import { notFound } from 'next/navigation'
+import { cache, Suspense } from 'react'
 import ViewCounter from '../view-counter'
-import { getViewsCount } from '@/lib/queries'
-import { getBlogPosts } from '@/lib/blog'
-import { increment } from '@/lib/actions'
 
 export async function generateMetadata({
   params,

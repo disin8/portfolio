@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { highlight } from 'sugar-high'
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { highlight } from 'sugar-high'
 import { TweetComponent } from './tweet'
 
 function Table({ data }) {

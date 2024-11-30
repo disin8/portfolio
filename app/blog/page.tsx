@@ -1,8 +1,8 @@
+import { getBlogPosts } from '@/lib/blog'
+import { getViewsCount } from '@/lib/queries'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import ViewCounter from './view-counter'
-import { getViewsCount } from '@/lib/queries'
-import { getBlogPosts } from '@/lib/blog'
 
 export const metadata = {
   title: 'Writings',
