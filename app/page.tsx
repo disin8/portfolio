@@ -23,7 +23,7 @@ export default function Page() {
       <div className="flex flex-col gap-y-3 mb-12">
         <div className="flex flex-row justify-between">
           <p className="font-normal">
-            <Link className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground" href="https://www.belorusneft.by/">Belarusneft</Link>
+            <Link className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground" href="https://www.belorusneft.by/">Altoros</Link>
             , Middle Front-end developer
           </p>
           <p className="opacity-50 text-sm font-light">august 2024 - now</p>
@@ -31,20 +31,20 @@ export default function Page() {
         <hr />
         <div className="flex flex-row justify-between">
           <p className="font-normal">
-            <span className="font-medium">Military Academy of the Republic of Belarus</span>
+            <span className="font-medium">Netguru</span>
             <br />
             Middle Front-end developer
-            <span className="ml-3 px-2 py-1 rounded-md bg-link-highlight font-light text-xs">Part time</span>
+            <span className="ml-3 px-2 py-1 rounded-md bg-link-highlight font-light text-xs">Full time</span>
           </p>
           <p className="opacity-50 text-sm font-light">may 2023 - april 2024</p>
         </div>
         <hr />
         <div className="flex flex-row justify-between">
           <p className="font-normal">
-            <Link className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground" href="https://itechart.com">iTechArt</Link>
+            <Link className="font-medium underline underline-offset-2 transition-colors decoration-[#505050] hover:decoration-foreground" href="https://itechart.com">Vention</Link>
             , Front-end developer
           </p>
-          <p className="opacity-50  text-sm font-light">september 2021 - april 2023</p>
+          <p className="opacity-50  text-sm font-light">september 2020 - april 2023</p>
         </div>
       </div>
 
