@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { increment } from '@/lib/actions'
 import { getBlogPosts } from '@/lib/blog'
 import { getViewsCount } from '@/lib/queries'
-import { CustomMDX } from 'components/mdx'
+import { CustomMDX } from '@/components/mdx'
 import { unstable_noStore as noStore } from 'next/cache'
 import { notFound } from 'next/navigation'
 import { cache, Suspense } from 'react'
@@ -10,8 +10,11 @@ import ViewCounter from '../view-counter'
 
 export async function generateMetadata({
   params,
+}: {
+  params: Promise<{ slug: string }>
 }): Promise<Metadata | undefined> {
-  const post = getBlogPosts().find(post => post.slug === params.slug)
+  const { slug } = await params
+  const post = getBlogPosts().find(post => post.slug === slug)
   if (!post)
     return
 
@@ -81,8 +84,13 @@ function formatDate(date: string) {
   return `${fullDate} (${formattedDate})`
 }
 
-export default function Blog({ params }) {
-  const post = getBlogPosts().find(post => post.slug === params.slug)
+export default async function Blog({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const post = getBlogPosts().find(post => post.slug === slug)
 
   if (!post)
     notFound()

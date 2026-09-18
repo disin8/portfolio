@@ -34,7 +34,6 @@ export default function Page() {
             <span className="font-medium">Netguru</span>
             <br />
             Middle Front-end developer
-            <span className="ml-3 px-2 py-1 rounded-md bg-link-highlight font-light text-xs">Full time</span>
           </p>
           <p className="opacity-50 text-sm font-light">may 2023 - april 2024</p>
         </div>
